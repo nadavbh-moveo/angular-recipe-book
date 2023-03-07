@@ -1,6 +1,23 @@
-<header class="container">
-    <h1 class="text-primary">Recipe Book</h1>
-    <nav class="p-2">
-       <a *ngFor="let routeName of navRoutes" href="" class="text-capitalize text-muted">{{routeName}}</a>
-    </nav>
-</header>
+<nav class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <a routerLink="/" class="navbar-brand">
+                Recipe Book
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li *ngFor="let routeName of navRoutes"><a routerLink="/" class="text-capitalize">{{routeName}}</a></li>
+             </ul>
+             <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a routerLink="/" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/">Save Data</a></li>
+                        <li><a routerLink="/">Fetch Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
